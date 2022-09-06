@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -31,33 +32,20 @@ public class ProductController {
         return consumoAPIExterna.returnProduct().getValue().get(0);
     }
 
-    @GetMapping("/insert")
-    public String insertObj(){
-
-        List<ProductDTO> productDTOS = consumoAPIExterna.returnProduct().getValue();
-
-
-
-//        ProductDTO productDTO = consumoAPIExterna.returnProduct().getValue().get(0);
+//    @GetMapping("/insert")
+//    public String insertObj(){
+//
+//        List<ProductDTO> productDTOs = consumoAPIExterna.returnProduct().getValue();
+//
+//
+//        List<Product> products = new ArrayList<>();
 //        Product product = new Product();
 //
-//        product.setNomeProduto(productDTO.getNomeProduto());
-//        product.setNomeRegiao(productDTO.getNomeRegiao());
-//        product.setAnoEmissao(productDTO.getAnoEmissao());
-//        product.setAtividade(productDTO.getAtividade());
-//        product.setAreaCusteio(productDTO.getAreaCusteio());
-//        product.setCdFonteRecurso(productDTO.getCdFonteRecurso());
-//        product.setCdTipoSeguro(productDTO.getCdTipoSeguro());
-//        product.setCdSubPrograma(productDTO.getCdSubPrograma());
-//        product.setMesEmissao(productDTO.getMesEmissao());
-//        product.setCdModalidade(productDTO.getCdModalidade());
-//        product.setNomeUF(productDTO.getNomeUF());
-//        product.setVlCusteio(productDTO.getVlCusteio());
-//        product.setCdPrograma(productDTO.getCdPrograma());
-//        product.setQtdCusteio(productDTO.getQtdCusteio());
-//
-//        productRepository.save(product);
-
-        return "Objeto Salvo!";
-    }
+//        for (ProductDTO productDTO:productDTOs) {
+//            product = productDTO.create(productDTO);
+//            productRepository.save(product);
+//        }
+//        return "Agora foi!";
+//    }
+    
 }

@@ -1,9 +1,11 @@
 package com.example.Projeto_Credito_Rural.dto;
 
+import com.example.Projeto_Credito_Rural.entity.Product;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
+import org.modelmapper.ModelMapper;
 
 import java.math.BigDecimal;
 
@@ -57,4 +59,8 @@ public class ProductDTO {
     @JsonProperty("AreaCusteio")
     private String AreaCusteio;
 
+    public Product create(ProductDTO productDTO){
+        ModelMapper modelMapper = new ModelMapper();
+        return modelMapper.map(productDTO,Product.class);
+    }
 }
