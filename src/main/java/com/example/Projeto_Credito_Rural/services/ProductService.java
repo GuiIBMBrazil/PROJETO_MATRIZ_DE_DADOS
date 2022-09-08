@@ -4,11 +4,13 @@ import com.example.Projeto_Credito_Rural.dto.ProductDTO;
 import com.example.Projeto_Credito_Rural.entity.Product;
 import com.example.Projeto_Credito_Rural.repositories.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class ProductService {
@@ -17,16 +19,20 @@ public class ProductService {
 
 
     //CONSULTAR TODOS OS PRODUCTS
-    public List<ProductDTO> getProducts(Pageable pageable){
-        List<Product> products = productRepository.findAll();
-        List<ProductDTO> productDTOS = new ArrayList<>();
+    public Page<Product> getProducts(Pageable pageable) {
+        Page<Product> products = productRepository.findAll(pageable);
 
-        for (Product product:products) {
-            productDTOS.add(new ProductDTO(product));
-        }
-
-        return productDTOS;
+        return products;
     }
 
-    //CONSULTAR POR ID
+    //CONSULTA POR ID
+
+    public Optional<ProductDTO> getById(Integer id){
+        Optional<Product> product = productRepository.findById(id);
+
+        if(product.isEmpty()){
+            return null;
+        }
+        return Optional.of(new ProductDTO(product.get()));
+    }
 }
