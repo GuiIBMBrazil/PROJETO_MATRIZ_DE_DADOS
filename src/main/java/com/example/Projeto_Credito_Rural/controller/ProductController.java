@@ -3,16 +3,12 @@ package com.example.Projeto_Credito_Rural.controller;
 import com.example.Projeto_Credito_Rural.dto.ProductDTO;
 import com.example.Projeto_Credito_Rural.entity.Product;
 import com.example.Projeto_Credito_Rural.repositories.ConsumoAPIExterna;
-import com.example.Projeto_Credito_Rural.repositories.ProductRepository;
-import com.example.Projeto_Credito_Rural.repositories.ProductReturn;
 import com.example.Projeto_Credito_Rural.services.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 import java.util.Optional;
 
 @RestController
