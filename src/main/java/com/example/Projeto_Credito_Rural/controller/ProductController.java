@@ -33,10 +33,10 @@ public class ProductController {
         return productService.getProducts(pageable);
     }
 
-    @GetMapping("/p")
-    public ProductDTO getProduct(){
-        return consumoAPIExterna.returnProduct().getValue().get(0);
-    }
+//    @GetMapping("/p")
+//    public ProductDTO getProduct(){
+//        return consumoAPIExterna.returnProduct().getValue().get(0);
+//    }
 
 //    @GetMapping("/insert")
 //    public String insertObj(){

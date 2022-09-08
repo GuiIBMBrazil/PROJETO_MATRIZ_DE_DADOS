@@ -59,8 +59,21 @@ public class ProductDTO {
     @JsonProperty("AreaCusteio")
     private String AreaCusteio;
 
-    public Product create(ProductDTO productDTO){
-        ModelMapper modelMapper = new ModelMapper();
-        return modelMapper.map(productDTO,Product.class);
+    public ProductDTO(Product p) {
+        this.id = p.getId();
+        this.nomeProduto = p.getNomeProduto();
+        this.nomeRegiao = p.getNomeRegiao();
+        this.nomeUF = p.getNomeUF();
+        this.MesEmissao = p.getMesEmissao();
+        this.AnoEmissao = p.getAnoEmissao();
+        this.cdPrograma = p.getCdPrograma();
+        this.cdSubPrograma = p.getCdSubPrograma();
+        this.cdFonteRecurso = p.getCdFonteRecurso();
+        this.cdTipoSeguro = p.getCdTipoSeguro();
+        this.QtdCusteio = p.getQtdCusteio();
+        this.VlCusteio = p.getVlCusteio();
+        this.Atividade = p.getAtividade();
+        this.cdModalidade = p.getCdModalidade();
+        this.AreaCusteio = p.getAreaCusteio();
     }
 }
