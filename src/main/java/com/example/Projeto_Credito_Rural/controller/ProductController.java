@@ -14,6 +14,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -30,6 +31,11 @@ public class ProductController {
 
     @Autowired
     ConsumoAPIExterna consumoAPIExterna;
+
+    @GetMapping("/spag")
+    public List<ProductDTO> getProductsSPag(){
+        return productService.getProductsNoPageable();
+    }
 
 
     //CONSULTAR REGISTROS COM PAGINAÇÃO.
@@ -70,7 +76,7 @@ public class ProductController {
 
     //REALIZA A DELEÇÃO DE UM OBJETO PELO ID
     @DeleteMapping("/{id}")
-    @ResponseStatus(HttpStatus.NO_CONTENT)
+    @ResponseStatus(HttpStatus.OK)
     public String delete(@PathVariable("id") Integer id){
         return productService.deleteProductById(id);
     }

@@ -4,10 +4,14 @@ import com.example.Projeto_Credito_Rural.dto.ProductDTO;
 import com.example.Projeto_Credito_Rural.entity.Product;
 import com.example.Projeto_Credito_Rural.repositories.ProductCustomRepository;
 import com.example.Projeto_Credito_Rural.repositories.ProductRepository;
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.web.server.ResponseStatusException;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,6 +19,7 @@ import java.util.Optional;
 
 @Service
 public class ProductService {
+
     @Autowired
     ProductRepository productRepository;
 
@@ -77,32 +82,19 @@ public class ProductService {
 
     //UPDATE
     public String updateProduct(Integer id, Product product){
+
+        ModelMapper modelMapper = new ModelMapper();
+
         Optional<Product> optional = productRepository.findById(id);
 
-        if(optional.isPresent()){
+        productRepository.findById(id)
+                .map(productBase -> {
+                    modelMapper.map(product,productBase);
+                    productRepository.save(productBase);
+                    return Void.TYPE;
+                }).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "REGISTRO NÃO ENCONTRADO"));
+        return "REGISTRO ATUALIZADO";
+       }
 
-            Product p = optional.get();
-            p.setNomeProduto(product.getNomeProduto());
-            p.setNomeUF(product.getNomeUF());
-            p.setAreaCusteio(product.getAreaCusteio());
-            p.setAtividade(product.getAtividade());
-            p.setCdModalidade(product.getCdModalidade());
-            p.setCdTipoSeguro(product.getCdTipoSeguro());
-            p.setAnoEmissao(product.getAnoEmissao());
-            p.setVlCusteio(product.getVlCusteio());
-            p.setQtdCusteio(product.getQtdCusteio());
-            p.setNomeRegiao(product.getNomeRegiao());
-            p.setCdPrograma(product.getCdPrograma());
-            p.setCdSubPrograma(product.getCdSubPrograma());
-            p.setCdFonteRecurso(product.getCdFonteRecurso());
-            p.setMesEmissao(product.getMesEmissao());
-
-            productRepository.save(p);
-
-            return "ID: " + p.getId() + " ATUALIZADO";
-        }
-        else {
-            return null;
-        }
     }
-}
+
