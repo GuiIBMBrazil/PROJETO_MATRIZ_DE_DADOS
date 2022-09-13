@@ -18,15 +18,15 @@ public class Product implements Serializable {
     private String nomeProduto;
     private String nomeRegiao;
     private String nomeUF;
-    private String MesEmissao;
-    private String AnoEmissao;
     private String cdPrograma;
     private String cdSubPrograma;
     private String cdFonteRecurso;
     private String cdTipoSeguro;
-    private Integer QtdCusteio;
-    private BigDecimal VlCusteio;
-    private String Atividade;
     private String cdModalidade;
+    private String AnoEmissao;
     private String AreaCusteio;
+    private String MesEmissao;
+    private BigDecimal VlCusteio;
+    private Integer QtdCusteio;
+    private String Atividade;
 }

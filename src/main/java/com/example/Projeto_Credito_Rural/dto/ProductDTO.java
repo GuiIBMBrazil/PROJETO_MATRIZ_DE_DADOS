@@ -23,12 +23,6 @@ public class ProductDTO {
     @JsonProperty("nomeUF")
     private String nomeUF;
 
-    @JsonProperty("MesEmissao")
-    private String MesEmissao;
-
-    @JsonProperty("AnoEmissao")
-    private String AnoEmissao;
-
     @JsonProperty("cdPrograma")
     private String cdPrograma;
 
@@ -41,20 +35,28 @@ public class ProductDTO {
     @JsonProperty("cdTipoSeguro")
     private String cdTipoSeguro;
 
-    @JsonProperty("QtdCusteio")
-    private Integer QtdCusteio;
+    @JsonProperty("cdModalidade")
+    private String cdModalidade;
+
+    @JsonProperty("AnoEmissao")
+    private String AnoEmissao;
+
+    @JsonProperty("AreaCusteio")
+    private String AreaCusteio;
+
+    @JsonProperty("MesEmissao")
+    private String MesEmissao;
 
     @JsonProperty("VlCusteio")
     private BigDecimal VlCusteio;
 
+    @JsonProperty("QtdCusteio")
+    private Integer QtdCusteio;
+
     @JsonProperty("Atividade")
     private String Atividade;
 
-    @JsonProperty("cdModalidade")
-    private String cdModalidade;
 
-    @JsonProperty("AreaCusteio")
-    private String AreaCusteio;
 
     public ProductDTO(Product p) {
         this.id = p.getId();
