@@ -7,6 +7,7 @@ import com.example.Projeto_Credito_Rural.repositories.ConsumoAPIExterna;
 import com.example.Projeto_Credito_Rural.repositories.ProductCustomRepository;
 import com.example.Projeto_Credito_Rural.repositories.ProductRepository;
 import com.example.Projeto_Credito_Rural.services.ProductService;
+import feign.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -15,6 +16,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -52,18 +54,12 @@ public class ProductController {
         return productService.getById(id);
     }
 
-    @GetMapping("/find")
-    public List<Product> getProductsCustom(){
-        String nome_produto = "LEITE";
-        return productCustomRepository.findAllSelect();
-    }
-
 
     /*REALIZAR CONSULTA E SOMATÓRIA POR ANO DE EMISSÃO DOS PRODUTOS FEIJÃO,SOJA,TRIGO,MILHO E
     CANA DE AÇUCAR
      */
     @GetMapping("/ano")
-    public List<Object> getProductsBySelectYear(@RequestParam(name = "ano_emissao",required = false) String ano_emissao){
+    public List<String> getProductsBySelectYear(@RequestParam(name = "ano_emissao",required = false) String ano_emissao){
         return productService.selectByYear(ano_emissao);
     }
 
@@ -98,13 +94,45 @@ public class ProductController {
 
 
 
-
-
-//    @GetMapping("/p")
-//    public ProductDTO getProduct(){
-//        return consumoAPIExterna.returnProduct().getValue().get(0);
+    //TENTATIVA DO TERCEIRO ENDPOINT(CONTROLLER)
+//    @GetMapping("/find")
+//    public List<Product> getProductsCustom(
+//    @RequestParam(name = "nomeProduto",required = false,defaultValue = "") String nomeProduto,
+//    @RequestParam(name = "nomeRegiao",required = false,defaultValue = "") String nomeRegiao,
+//    @RequestParam(name = "nomeUF",required = false,defaultValue = "") String nomeUF,
+//    @RequestParam(name = "cdPrograma",required = false,defaultValue = "") String cdPrograma,
+//    @RequestParam(name = "cdSubPrograma",required = false,defaultValue = "") String cdSubPrograma,
+//    @RequestParam(name = "cdFonteRecurso",required = false,defaultValue = "") String cdFonteRecurso,
+//    @RequestParam(name = "cdTipoSeguro",required = false,defaultValue = "") String cdTipoSeguro,
+//    @RequestParam(name = "cdModalidade",required = false,defaultValue = "") String cdModalidade,
+//    @RequestParam(name = "AnoEmissao",required = false,defaultValue = "") String AnoEmissao,
+//    @RequestParam(name = "MesEmissao",required = false,defaultValue = "") String MesEmissao,
+//    @RequestParam(name = "VlCusteio",required = false,defaultValue = "") BigDecimal VlCusteio,
+//    @RequestParam(name = "QtdCusteio",required = false,defaultValue = "") Integer QtdCusteio,
+//    @RequestParam(name = "Atividade",required = false,defaultValue = "") String Atividade
+//    ){
+//        return
+//                productCustomRepository.selectProduct(
+//                        nomeProduto,
+//                        nomeRegiao,
+//                        AnoEmissao,
+//                        cdFonteRecurso,
+//                        cdModalidade,
+//                        MesEmissao,
+//                        cdPrograma,
+//                        cdSubPrograma,
+//                        QtdCusteio,
+//                        VlCusteio,
+//                        Atividade,
+//                        nomeUF,
+//                        cdTipoSeguro);
 //    }
 
+
+
+
+
+   //REALIZAÇÃO DO ONBOARDING.
 //    @GetMapping("/insert")
 //    public String insertObj(){
 //
