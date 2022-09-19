@@ -1,7 +1,6 @@
 package com.example.Projeto_Credito_Rural.controller;
 
 import com.example.Projeto_Credito_Rural.dto.ProductDTO;
-import com.example.Projeto_Credito_Rural.dto.ProductSelect;
 import com.example.Projeto_Credito_Rural.entity.Product;
 import com.example.Projeto_Credito_Rural.repositories.ConsumoAPIExterna;
 import com.example.Projeto_Credito_Rural.repositories.ProductCustomRepository;
@@ -94,39 +93,39 @@ public class ProductController {
 
 
 
-    //TENTATIVA DO TERCEIRO ENDPOINT(CONTROLLER)
-//    @GetMapping("/find")
-//    public List<Product> getProductsCustom(
-//    @RequestParam(name = "nomeProduto",required = false,defaultValue = "") String nomeProduto,
-//    @RequestParam(name = "nomeRegiao",required = false,defaultValue = "") String nomeRegiao,
-//    @RequestParam(name = "nomeUF",required = false,defaultValue = "") String nomeUF,
-//    @RequestParam(name = "cdPrograma",required = false,defaultValue = "") String cdPrograma,
-//    @RequestParam(name = "cdSubPrograma",required = false,defaultValue = "") String cdSubPrograma,
-//    @RequestParam(name = "cdFonteRecurso",required = false,defaultValue = "") String cdFonteRecurso,
-//    @RequestParam(name = "cdTipoSeguro",required = false,defaultValue = "") String cdTipoSeguro,
-//    @RequestParam(name = "cdModalidade",required = false,defaultValue = "") String cdModalidade,
-//    @RequestParam(name = "AnoEmissao",required = false,defaultValue = "") String AnoEmissao,
-//    @RequestParam(name = "MesEmissao",required = false,defaultValue = "") String MesEmissao,
-//    @RequestParam(name = "VlCusteio",required = false,defaultValue = "") BigDecimal VlCusteio,
-//    @RequestParam(name = "QtdCusteio",required = false,defaultValue = "") Integer QtdCusteio,
-//    @RequestParam(name = "Atividade",required = false,defaultValue = "") String Atividade
-//    ){
-//        return
-//                productCustomRepository.selectProduct(
-//                        nomeProduto,
-//                        nomeRegiao,
-//                        AnoEmissao,
-//                        cdFonteRecurso,
-//                        cdModalidade,
-//                        MesEmissao,
-//                        cdPrograma,
-//                        cdSubPrograma,
-//                        QtdCusteio,
-//                        VlCusteio,
-//                        Atividade,
-//                        nomeUF,
-//                        cdTipoSeguro);
-//    }
+
+    @GetMapping("/find")
+    public List<Product> getProductsCustom(
+    @RequestParam(name = "nomeProduto",required = false) String nomeProduto,
+    @RequestParam(name = "nomeRegiao",required = false) String nomeRegiao,
+    @RequestParam(name = "nomeUF",required = false) String nomeUF,
+    @RequestParam(name = "cdPrograma",required = false) String cdPrograma,
+    @RequestParam(name = "cdSubPrograma",required = false) String cdSubPrograma,
+    @RequestParam(name = "cdFonteRecurso",required = false) String cdFonteRecurso,
+    @RequestParam(name = "cdTipoSeguro",required = false) String cdTipoSeguro,
+    @RequestParam(name = "cdModalidade",required = false) String cdModalidade,
+    @RequestParam(name = "AnoEmissao",required = false) String AnoEmissao,
+    @RequestParam(name = "MesEmissao",required = false) String MesEmissao,
+    @RequestParam(name = "VlCusteio",required = false) BigDecimal VlCusteio,
+    @RequestParam(name = "QtdCusteio",required = false) Integer QtdCusteio,
+    @RequestParam(name = "Atividade",required = false) String Atividade
+    ){
+        return
+                productService.selectProduct(
+                        nomeProduto,
+                        nomeRegiao,
+                        AnoEmissao,
+                        cdFonteRecurso,
+                        cdModalidade,
+                        MesEmissao,
+                        cdPrograma,
+                        cdSubPrograma,
+                        QtdCusteio,
+                        VlCusteio,
+                        Atividade,
+                        nomeUF,
+                        cdTipoSeguro);
+    }
 
 
 

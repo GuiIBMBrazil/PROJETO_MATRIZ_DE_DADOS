@@ -29,7 +29,7 @@ public class ProductService {
     ProductCustomRepository productCustomRepository;
 
 
-    public List<String> selectByYear(String ano_emissao){
+    public List<String> selectByYear(String ano_emissao) {
         List<String> list = new ArrayList<>();
 
         list.add(productCustomRepository.selectYearFeijao(ano_emissao));
@@ -42,11 +42,11 @@ public class ProductService {
     }
 
     //CONSULTAR TODOS OS PRODUCTS SEM PAGINAÇÃO
-    public List<ProductDTO> getProductsNoPageable(){
+    public List<ProductDTO> getProductsNoPageable() {
         List<Product> products = productRepository.findAll();
         List<ProductDTO> productDTOS = new ArrayList<>();
 
-        for (Product p:products) {
+        for (Product p : products) {
             productDTOS.add(new ProductDTO(p));
         }
 
@@ -62,29 +62,29 @@ public class ProductService {
 
     //CONSULTA POR ID
 
-    public Optional<ProductDTO> getById(Integer id){
+    public Optional<ProductDTO> getById(Integer id) {
         Optional<Product> product = productRepository.findById(id);
 
-        if(product.isEmpty()){
+        if (product.isEmpty()) {
             return null;
         }
         return Optional.of(new ProductDTO(product.get()));
     }
 
     //INSERÇÃO
-    public String saveProduct(Product product){
+    public String saveProduct(Product product) {
         productRepository.save(product);
         return "OBJETO INSERIDO";
     }
 
     //DELEÇÃO
-    public String deleteProductById(Integer id){
+    public String deleteProductById(Integer id) {
         productRepository.deleteById(id);
         return "OBJETO DELETADO";
     }
 
     //UPDATE
-    public String updateProduct(Integer id, Product product){
+    public String updateProduct(Integer id, Product product) {
 
         ModelMapper modelMapper = new ModelMapper();
 
@@ -92,48 +92,78 @@ public class ProductService {
 
         productRepository.findById(id)
                 .map(productBase -> {
-                    modelMapper.map(product,productBase);
+                    modelMapper.map(product, productBase);
                     productRepository.save(productBase);
                     return Void.TYPE;
                 }).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "REGISTRO NÃO ENCONTRADO"));
         return "REGISTRO ATUALIZADO";
-       }
-
     }
 
-    //TENTATIVAS DO TERCEIRO ENDPOINT (SERVICE).
 
-//    public List<Product> selectProduct(
-//            String nomeProduto,
-//            String nomeRegiao,
-//            String nomeUF,
-//            String cdPrograma,
-//            String cdSubPrograma,
-//            String cdFonteRecurso,
-//            String cdTipoSeguro,
-//            String cdModalidade,
-//            String AnoEmissao,
-//            String MesEmissao,
-//            Integer QtdCusteio,
-//            BigDecimal VlCusteio,
-//            String Atividade
-//    ){
-//        List<Product> products = new ArrayList<>();
-//        products =
-//        productCustomRepository.selectProduct(
-//                nomeProduto,
-//                nomeRegiao,
-//                AnoEmissao,
-//                cdFonteRecurso,
-//                cdModalidade,
-//                MesEmissao,
-//                cdPrograma,
-//                cdSubPrograma,
-//                nomeUF,
-//                QtdCusteio,
-//                VlCusteio,
-//                Atividade,
-//                cdTipoSeguro
-//        );
-//        return products;
-//    }
+    public List<Product> selectProduct(
+            String nomeProduto,
+            String nomeRegiao,
+            String AnoEmissao,
+            String cdFonteRecurso,
+            String cdModalidade,
+            String MesEmissao,
+            String cdPrograma,
+            String cdSubPrograma,
+            Integer QtdCusteio,
+            BigDecimal VlCusteio,
+            String Atividade,
+            String nomeUF,
+            String cdTipoSeguro
+    ) {
+        if (nomeProduto != null){
+            return productCustomRepository.selectByNomeProduto(nomeProduto);
+        }
+        else if (nomeRegiao != null) {
+            return productCustomRepository.selectByRegiao(nomeRegiao);
+        }
+        else if (AnoEmissao != null) {
+            return productCustomRepository.selectByAnoEmissao(AnoEmissao);
+        }
+        else if (cdFonteRecurso != null) {
+            return productCustomRepository.selectByFonteRecurso(cdFonteRecurso);
+        }
+        else if (cdModalidade != null) {
+            return productCustomRepository.selectByModalidade(cdModalidade);
+        }
+        else if (MesEmissao != null) {
+            return productCustomRepository.selectByMesEmissao(MesEmissao);
+        }
+        else if (cdPrograma != null) {
+            return productCustomRepository.selectByPrograma(cdPrograma);
+        }
+        else if (cdSubPrograma != null) {
+            return productCustomRepository.selectBySubPrograma(cdSubPrograma);
+        }
+        else if (QtdCusteio != null) {
+            return productCustomRepository.selectByQtdCusteio(QtdCusteio);
+        }
+        else if (VlCusteio != null) {
+            return productCustomRepository.selectByVlCusteio(VlCusteio);
+        }
+        else if (Atividade != null) {
+            return productCustomRepository.selectByAtividade(Atividade);
+        }
+        else if (nomeUF != null) {
+            return productCustomRepository.selectByNomeUF(nomeUF);
+        }
+        else if (cdTipoSeguro != null) {
+            return productCustomRepository.selectByTipoSeguro(cdTipoSeguro);
+        }
+        else {
+            return  null;
+        }
+    }
+
+}
+
+
+
+
+
+
+
