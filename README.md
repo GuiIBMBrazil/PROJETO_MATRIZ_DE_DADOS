@@ -75,6 +75,17 @@ Para realizar uma consulta por ID no Insomnia basta digitar a URL padrão "http:
 
 <img width="750" alt="CONSULTA DE UM PRODUTO PELO SEU ID NO INSOMNIA" src="https://user-images.githubusercontent.com/110836645/190995633-bd304408-5742-48a7-a444-dcd01fe2bfa2.png">
 
+SWAGGER UI
+
+No Swagger UI deve-se selecionar a opção "getProductById" ao invés da opção "getProducts", e logo após o Swagger irá solicitar um parâmetro, que no caso será o ID do registro no banco de dados, após informar o mesmo basta clicar em "Execute" e a consulta será exibida.
+
+PARÂMETRO SOLICITADO
+<img width="916" alt="CONSULTA POR ID NO SWAGGER" src="https://user-images.githubusercontent.com/110836645/190996717-43ba8526-4693-4b4d-aed1-0a7259017ad9.png">
+
+RESPOSTA DO ENDPOINT
+<img width="907" alt="RESPOSTA DA CONSULTA POR ID NO SWAGGER" src="https://user-images.githubusercontent.com/110836645/190997062-e570e4bd-4b9b-4aac-b067-5d422eb2dc93.png">
+
+
 
 
 
