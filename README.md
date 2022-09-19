@@ -86,6 +86,28 @@ RESPOSTA DO ENDPOINT
 <img width="907" alt="RESPOSTA DA CONSULTA POR ID NO SWAGGER" src="https://user-images.githubusercontent.com/110836645/190997062-e570e4bd-4b9b-4aac-b067-5d422eb2dc93.png">
 
 
+3° ENDPOINT: O terceiro endpoint realiza a somatória dos atributos "VlCusteio" e "QtdCusteio" dos produtos soja,feijão,trigo, milho e cana de açucar, no período de 12 meses.
+
+INSOMNIA
+
+Para realizar esse tipo de consulta a regra é diferente, o usuário terá que digitar a URL padrão "http://localhost:8080/product" juntamente com a assinatura "/ano" e "?ano_emissao=(ano desejado)", por exemplo se o usuário desejasse a somatória do ano de 2018, ele teria que digitar isso "http://localhost:8080/product/ano?ano_emissao=2018", ainda no método GET pois é uma consulta, e a consulta seria exibida conforme o exemplo abaixo.
+
+<img width="765" alt="CONSULTA POR ANO EMISSAO INSOMNIA" src="https://user-images.githubusercontent.com/110836645/190999031-ecb5dc15-d563-4a5a-85fb-21fad114ed41.png">
+
+SWAGGER UI
+
+No Swagger UI a opção escolhida deve ser getProductsByYear, o Swagger irá solicitar um parâmetro chamado "ano_emissao" onde o usuário deve digitar o ano desejado da consulta, após informar e clicar em "Execute" a consulta será realizada.
+
+PARÂMETRO ANO_EMISSAO
+<img width="916" alt="ANO_EMISSAO SWAGGER UI" src="https://user-images.githubusercontent.com/110836645/190999714-fdfcfd2d-d9fc-4d4e-ba06-650caabb6a0c.png">
+
+RESPOSTA DO ENDPOINT
+<img width="889" alt="RESULTADO CONSULTA POR ANO_EMISSAO" src="https://user-images.githubusercontent.com/110836645/191000194-c196957d-43f1-4fbb-bd61-265f3c7a2a81.png">
+
+
+
+
+
 
 
 
