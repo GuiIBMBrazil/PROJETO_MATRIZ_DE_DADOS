@@ -13,7 +13,9 @@ O banco de dados MySQL foi povoado com 1000 elementos por meio de um processo de
 
 
 
-ENDPOINTS PRINCIPAIS
+<h2>ENDPOINTS PRINCIPAIS</h2>
+
+<h3>GET</h3>
 
 1° ENPOINT: O primero endpoint realiza a consulta de todos os produtos do banco de dados com paginação.
 
@@ -103,10 +105,25 @@ PARÂMETRO ANO_EMISSAO
 
 RESPOSTA DO ENDPOINT
 <img width="889" alt="RESULTADO CONSULTA POR ANO_EMISSAO" src="https://user-images.githubusercontent.com/110836645/191000194-c196957d-43f1-4fbb-bd61-265f3c7a2a81.png">
+
 Vale ressaltar que no resultado da consulta, o primero número após a vírgula é o somatório do "VlCusteio" e após a vírgula novamente o número seguinte é o somatório da "QtdCusteio".
 
 
+4° ENDPOINT: O quarto endpoint simplesmente retorna a lista de todos os produtos sem paginação, embora não seja muito usual o usuário pode ter preferência por esse tipo de consulta.
 
+
+INSOMNIA
+
+Para realizar esse tipo de consulta no Insomnia basta digitar a URL padrão seguido da anotação "/spag", basicamente seria "http://localhost:8080/product/spag".
+
+<img width="773" alt="CONSULTA SEM PAGINAÇÃO INSOMNIA" src="https://user-images.githubusercontent.com/110836645/191002032-4046dbef-4773-4653-8b76-f08a07ab44ce.png">
+
+
+SWAGGER UI
+
+No Swagger UI basta escolher a opção "getProductsSPag" e clicar em "Execute".
+
+<img width="848" alt="SPAG SWAGGER UI" src="https://user-images.githubusercontent.com/110836645/191002841-384641ca-2a0f-4e70-b5c1-09b6ba7d0ffc.png">
 
 
 
