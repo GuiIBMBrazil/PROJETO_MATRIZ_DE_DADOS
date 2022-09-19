@@ -126,6 +126,35 @@ No Swagger UI basta escolher a opção "getProductsSPag" e clicar em "Execute".
 <img width="848" alt="SPAG SWAGGER UI" src="https://user-images.githubusercontent.com/110836645/191002841-384641ca-2a0f-4e70-b5c1-09b6ba7d0ffc.png">
 
 
+5° ENDPOINT: o quinto endpoint realiza consultas com quaisquer parâmetros, ou seja, o usuário pode escolher produtos por qualquer um dos atributos, exceto o ID pois já existe um ENDPOINT para o mesmo.
+
+INSOMNIA
+
+Ainda no método GET pois se trata de uma consulta, o usuário irá digitar a URL padrão + "/find" e o parâmetro que deseja, um determinado atributo com um determinado valor, vale ressaltar que a URL é Case Sensitivity então para realizar as consultas é recomendado usar a lista de nomes abaixo, é como a API irá entender o que é solicitado:
+
+-nomeProduto 
+-nomeRegiao 
+-nomeUF
+-cdPrograma 
+-cdSubPrograma 
+-cdFonteRecurso 
+-cdTipoSeguro
+-cdModalidade 
+-AnoEmissao
+-MesEmissao 
+-VlCusteio 
+-QtdCusteio 
+-Atividade
+
+No exemplo abaixo será realizada uma consulta onde se quer todos os produtos cujo o nomeProduto seja igual a leite.
+
+<img width="727" alt="CONSULTA QUERY POR NOME PRODUTO" src="https://user-images.githubusercontent.com/110836645/191109087-7c828fdc-732b-4185-823b-6f2f116bfba3.png">
+
+Agora ainda é possível mudar o parâmetro e solicitar uma nova consulta em que os produtos devem nomeRegiao igual a sul.
+
+<img width="767" alt="CONSULTA QUERY DINÂMICA POR NOME REGIÃO" src="https://user-images.githubusercontent.com/110836645/191109712-bd6b5878-40d1-4223-9376-06beb360cb76.png">
+
+
 <h3>CRUD</h3>
 
 Até o momento só foi mostrado a consulta do banco de dados, sem realizar nenhuma alteração no mesmo, partir de agora será mostrado como se realizar inserções, deleções e atualizações no banco de dados da aplicação.
