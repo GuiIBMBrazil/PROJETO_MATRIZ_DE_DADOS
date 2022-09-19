@@ -145,7 +145,44 @@ Se houver sucesso na inserção, a "Preview" deve mostrar a mensagem dizendo que
 <img width="762" alt="CONSULTANDO NOVO REGISTRO" src="https://user-images.githubusercontent.com/110836645/191018673-576d8a27-d886-4c2e-a443-db20d80029f5.png">
 
 
+SWAGGER UI
+
+No Swagger UI o usuário deve buscar a opção POST save, clicar em "try it out" e logo depois o Swagger irá solicitar os parâmetros desse tipo de requisição, isto é, o body do novo registro.
+
+REALIZANDO INSERÇÃO
+<img width="927" alt="PARÂMETROS SWAGGER UI INSERÇÃO" src="https://user-images.githubusercontent.com/110836645/191020297-24cf8787-a602-4074-b917-5fec57bf428e.png">
+
+OBJETO INSERIDO
+<img width="928" alt="OBJETO INSERIDO PELO SWAGGER" src="https://user-images.githubusercontent.com/110836645/191020836-d2fdea63-2947-4c82-bc8a-6e6e3c42f94a.png">
 
 
+<h4>ATUALIZAÇÃO</h4>
+
+A atualização de um registro é parecida com a inserção, porém nesse caso não deve haver alteração do ID, uma vez que nada novo foi criado.
+
+
+INSOMNIA
+
+Para realizar a atualização de um registro, o usuário deve escolher o método PUT e digitar a URL padrão seguida no ID do objeto que o usuário deseja atualizar, no exemplo abaixo é realizada a atualização do objeto cujo o ID é 5, do nordeste ele passará a ser do sul.
+
+<img width="773" alt="ATUALIZAÇÃO USANDO O INSOMNIA" src="https://user-images.githubusercontent.com/110836645/191022312-7c6526d1-3513-4550-b059-efb39d896aa7.png">
+
+ALTERANDO A REGIÃO
+<img width="764" alt="REGISTRO ATUALIZADO COM SUCESSO INSOMNIA" src="https://user-images.githubusercontent.com/110836645/191022721-36e229a8-3816-46a9-a2d7-f3e9fb262f18.png">
+
+Agora se for realizada a busca do produto cujo o ID é 5 pelo método GET, a região terá sido alterada.
+
+<img width="780" alt="VERIFICANDO ATUALIZAÇÃO" src="https://user-images.githubusercontent.com/110836645/191023214-fa4354a2-7ebf-48e3-ae93-c630f09db586.png">
+
+
+SWAGGER UI
+
+No Swagger UI deve ser escolhida a opção "update", depois de clicar em "try it out", o usuário deve informar o ID desejado e atualizar os atributos que deseja, no exemplo abaixo será usado o registro cujo o ID é 5 e a região voltará a ser o nordeste.
+
+ATUALIZANDO REGISTRO
+<img width="922" alt="ATUALIZANDO REGISTRO SWAGGER" src="https://user-images.githubusercontent.com/110836645/191024615-9b71fb4a-b21c-4325-98c4-2de5c56b708a.png">
+
+REGISTRO ATUALIZADO
+<img width="921" alt="VERIFICANDO ATUALIZAÇÃO SWAGGER" src="https://user-images.githubusercontent.com/110836645/191024868-3b5ca1f8-71e1-4ec2-ada0-5d47d301f59d.png">
 
 
