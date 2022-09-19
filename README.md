@@ -32,4 +32,11 @@ O uso do Insomnia e Postman é bem parecido, a requisição será feita através
 
 Como é uma consulta com paginação, existe um método para visualizar as outras páginas da consulta, para isso basta digitar a URL exatamente como em uma consulta normal porém logo depois você deve digitar "?page=(número da página desejada)" e assim você pode conseguir acesso as outras páginas da consulta, conforme o exemplo abaixo.
 
+<img width="754" alt="COMO REALIZAR A TROCA DE PÁGINA NO INSOMNIA" src="https://user-images.githubusercontent.com/110836645/190988547-93c381e0-aa7f-4f69-a628-357222a5d100.png">
+
+No exemplo acima é acessada a segunda página dessa consulta, também é possível consultar o número de elementos da consulta e o total de páginas geradas, conforme a imagem abaixo.
+
+<img width="960" alt="PAGINAÇÃO NÚMERO DE ELEMENTOS E TOTAL DE PÁGINAS" src="https://user-images.githubusercontent.com/110836645/190989387-e7d62de1-23c2-4ea1-a225-6dfdd600803d.png">
+
+
 
