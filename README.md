@@ -11,6 +11,7 @@ O banco de dados MySQL foi povoado com 1000 elementos por meio de um processo de
 - https://olinda.bcb.gov.br/olinda/servico/SICOR/versao/v2/odata/ComercRegiaoUFProduto?$top=1000&$format=json&$select=nomeProduto,nomeRegiao,nomeUF,MesEmissao,AnoEmissao,cdPrograma,cdSubPrograma,cdFonteRecurso,cdTipoSeguro,QtdCusteio,VlCusteio,Atividade,cdModalidade,AreaCusteio
 
 
+ENDPOINS PRINCIPAIS
 
-
-
+1° ENPOINT: O primero endpoint realiza a consulta de todos os produtos do banco de dados com paginação.
+<img width="868" alt="CONSULTAS COM PAGINAÇÃO" src="https://user-images.githubusercontent.com/110836645/190983727-7ac9f3f2-130c-4615-856b-c6281215d1f3.png">
