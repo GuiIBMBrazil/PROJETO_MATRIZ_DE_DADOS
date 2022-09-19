@@ -132,6 +132,7 @@ INSOMNIA
 
 Ainda no método GET pois se trata de uma consulta, o usuário irá digitar a URL padrão + "/find" e o parâmetro que deseja, um determinado atributo com um determinado valor, vale ressaltar que a URL é Case Sensitivity então para realizar as consultas é recomendado usar a lista de nomes abaixo, é como a API irá entender o que é solicitado:
 
+<p>
 -nomeProduto 
 -nomeRegiao 
 -nomeUF
@@ -145,6 +146,7 @@ Ainda no método GET pois se trata de uma consulta, o usuário irá digitar a UR
 -VlCusteio 
 -QtdCusteio 
 -Atividade
+ </p>
 
 No exemplo abaixo será realizada uma consulta onde se quer todos os produtos cujo o nomeProduto seja igual a leite.
 
