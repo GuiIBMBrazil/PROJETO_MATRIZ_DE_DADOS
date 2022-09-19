@@ -103,6 +103,7 @@ PARÂMETRO ANO_EMISSAO
 
 RESPOSTA DO ENDPOINT
 <img width="889" alt="RESULTADO CONSULTA POR ANO_EMISSAO" src="https://user-images.githubusercontent.com/110836645/191000194-c196957d-43f1-4fbb-bd61-265f3c7a2a81.png">
+Vale ressaltar que no resultado da consulta, o primero número após a vírgula é o somatório do "VlCusteio" e após a vírgula novamente o número seguinte é o somatório da "QtdCusteio".
 
 
 
