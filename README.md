@@ -168,6 +168,7 @@ Para realizar a atualização de um registro, o usuário deve escolher o método
 <img width="773" alt="ATUALIZAÇÃO USANDO O INSOMNIA" src="https://user-images.githubusercontent.com/110836645/191022312-7c6526d1-3513-4550-b059-efb39d896aa7.png">
 
 ALTERANDO A REGIÃO
+
 <img width="764" alt="REGISTRO ATUALIZADO COM SUCESSO INSOMNIA" src="https://user-images.githubusercontent.com/110836645/191022721-36e229a8-3816-46a9-a2d7-f3e9fb262f18.png">
 
 Agora se for realizada a busca do produto cujo o ID é 5 pelo método GET, a região terá sido alterada.
@@ -184,5 +185,35 @@ ATUALIZANDO REGISTRO
 
 REGISTRO ATUALIZADO
 <img width="921" alt="VERIFICANDO ATUALIZAÇÃO SWAGGER" src="https://user-images.githubusercontent.com/110836645/191024868-3b5ca1f8-71e1-4ec2-ada0-5d47d301f59d.png">
+
+
+<h4>DELEÇÃO</h4>
+
+A deleção de um reistro pode ser feita através de seu ID.
+
+INSOMNIA
+
+No Insomnia basta mudar o método de GET para DELETE e digitar o ID do objeto desejado, como no exemplo abaixo será deletado o objeto cujo o ID é 1010.
+
+<img width="803" alt="DELETANDO REGISTROS COM INSOMNIA" src="https://user-images.githubusercontent.com/110836645/191033010-434f13ff-3e20-4ee6-a69e-eb89734253d5.png">
+
+Agora se o método GET for usado para buscar o registro cujo ID é 1010, ele não deverá constar na base de dados.
+
+<img width="783" alt="CONFIRMANDO A DELEÇÃO DO OBJETO" src="https://user-images.githubusercontent.com/110836645/191036578-4ced9c46-c921-4368-8971-857360c0aa27.png">
+
+
+SWAGGER UI
+
+No Swagger UI o usuário deverá escolher a opção DELETE delete e depois de clicar em "try it out" e logo depois informar como parâmetro o ID do registro desejado, NO caso será deletado o elemento de ID 1012 que consta na base de dados.
+
+<img width="927" alt="ESCOLHENDO PARÂMETRO DO DELETE SWAGGER UI" src="https://user-images.githubusercontent.com/110836645/191039284-2c7fdeaf-2d7e-4e22-8659-376c8fdea04d.png">
+
+OBJETO DELETADO
+
+<img width="941" alt="VERIFICANDO DELEÇÃO DO OBJETO SWAGGER" src="https://user-images.githubusercontent.com/110836645/191040768-9ed836c5-8774-4a45-8778-5f9eacc8c6d5.png">
+
+Se for realizada uma consulta pelo registro cujo o ID é 1012, ele não deve constar mais na base de dados.
+
+<img width="754" alt="CONFIRMANDO DELEÇÃO SWAGGER UI" src="https://user-images.githubusercontent.com/110836645/191041645-e6e87dda-eb26-4f58-91e6-6de4c7951070.png">
 
 
