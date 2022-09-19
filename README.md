@@ -39,4 +39,28 @@ No exemplo acima é acessada a segunda página dessa consulta, também é possí
 <img width="960" alt="PAGINAÇÃO NÚMERO DE ELEMENTOS E TOTAL DE PÁGINAS" src="https://user-images.githubusercontent.com/110836645/190989387-e7d62de1-23c2-4ea1-a225-6dfdd600803d.png">
 
 
+POSTMAN
+
+O uso do Postman é extremamente parecido com o do Insomnia porém possui uma interface gráfica diferente, as consultas através da URL "http://localhost:8080/product" e a visualização das páginas funciona da mesma forma, conforme a imagem abaixo.
+
+<img width="637" alt="CONSULTA POR PAGINAÇÃO USANDO O POSTMAN" src="https://user-images.githubusercontent.com/110836645/190990204-d9bef1cc-f5c2-4f14-807b-464da3dd1db6.png">
+
+Para realizar a troca de páginas, basta usar o mesmo método utilizado no Insomnia e digitar "?page=(número da página desejada)".
+
+
+SWAGGER UI
+
+A API utiliza o Swagger UI para tornar a consulta mais fácil e dinâmica, assim se pode visualizar os endpoints de uma forma mais rápida. Para acessar a documentação Swagger se deve digitar na URL da própria WEB a seguinte mensagem "http://localhost:8080/swagger-ui.html", a imagem abaixo exemplifica isso.
+
+<img width="960" alt="COMO ACESSAR O SWAGGER" src="https://user-images.githubusercontent.com/110836645/190991615-d98f0182-18a9-4fae-910c-1f5c0dd40f63.png">
+
+Quando se clicar em "product-controller" se pode ter acesso a todos os endpoints da API, no caso do primeiro endpoint se deve ir endpoint que está anotado como "getProducts", confrome a imagem abaixo.
+
+<img width="932" alt="COMO ACESSAR O PRIMERO ENDPOINT COM O SWAGGER" src="https://user-images.githubusercontent.com/110836645/190992523-d7b4b053-e698-49ab-bf7f-3590cc6d61a9.png">
+
+
+
+
+
+
 
