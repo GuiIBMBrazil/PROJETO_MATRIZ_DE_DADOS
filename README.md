@@ -157,6 +157,18 @@ Agora ainda é possível mudar o parâmetro e solicitar uma nova consulta em que
 <img width="767" alt="CONSULTA QUERY DINÂMICA POR NOME REGIÃO" src="https://user-images.githubusercontent.com/110836645/191109712-bd6b5878-40d1-4223-9376-06beb360cb76.png">
 
 
+SWAGGER UI
+
+No caso do Swagger UI deve-se escolher a opção GET getProductsCustom, após clicar em "try it out" irá aparecer campos de preenchimento para todos os atributos, porém vale ressaltar que essa API permite a escolha de apenas 1 campo por consulta, você não pode escolher mais de dois parâmetros ao mesmo tempo nessa API, no exemplo abaixo será selecionado todos os produtos cuja atividade seja do tipo 1.
+
+<img width="931" alt="USANDO O SWAGGER 5 ENDPOINT ATIVIDADE" src="https://user-images.githubusercontent.com/110836645/191112780-7e4cb141-64b5-41e8-8311-fd1dd8ac8c0e.png">
+
+RESULTADO DA CONSULTA DO SWAGGER UI
+<img width="929" alt="5 ENDPOINT RESULTADO SWAGGER" src="https://user-images.githubusercontent.com/110836645/191113063-102b013f-c5f1-4b6a-8674-d0acd9f3d8ea.png">
+
+
+
+
 <h3>CRUD</h3>
 
 Até o momento só foi mostrado a consulta do banco de dados, sem realizar nenhuma alteração no mesmo, partir de agora será mostrado como se realizar inserções, deleções e atualizações no banco de dados da aplicação.
