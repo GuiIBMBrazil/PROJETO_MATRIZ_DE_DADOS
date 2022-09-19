@@ -83,49 +83,10 @@ public class ProductController {
     }
 
 
-
-
-
-
-
-
-
-
-
-
-
     @GetMapping("/find")
-    public List<Product> getProductsCustom(
-    @RequestParam(name = "nomeProduto",required = false) String nomeProduto,
-    @RequestParam(name = "nomeRegiao",required = false) String nomeRegiao,
-    @RequestParam(name = "nomeUF",required = false) String nomeUF,
-    @RequestParam(name = "cdPrograma",required = false) String cdPrograma,
-    @RequestParam(name = "cdSubPrograma",required = false) String cdSubPrograma,
-    @RequestParam(name = "cdFonteRecurso",required = false) String cdFonteRecurso,
-    @RequestParam(name = "cdTipoSeguro",required = false) String cdTipoSeguro,
-    @RequestParam(name = "cdModalidade",required = false) String cdModalidade,
-    @RequestParam(name = "AnoEmissao",required = false) String AnoEmissao,
-    @RequestParam(name = "MesEmissao",required = false) String MesEmissao,
-    @RequestParam(name = "VlCusteio",required = false) BigDecimal VlCusteio,
-    @RequestParam(name = "QtdCusteio",required = false) Integer QtdCusteio,
-    @RequestParam(name = "Atividade",required = false) String Atividade
-    ){
-        return
-                productService.selectProduct(
-                        nomeProduto,
-                        nomeRegiao,
-                        AnoEmissao,
-                        cdFonteRecurso,
-                        cdModalidade,
-                        MesEmissao,
-                        cdPrograma,
-                        cdSubPrograma,
-                        QtdCusteio,
-                        VlCusteio,
-                        Atividade,
-                        nomeUF,
-                        cdTipoSeguro);
-    }
+    public List<Product> getProductsCustom(@RequestParam(name = "nomeProduto",required = false) String nomeProduto, @RequestParam(name = "nomeRegiao",required = false) String nomeRegiao, @RequestParam(name = "nomeUF",required = false) String nomeUF, @RequestParam(name = "cdPrograma",required = false) String cdPrograma, @RequestParam(name = "cdSubPrograma",required = false) String cdSubPrograma, @RequestParam(name = "cdFonteRecurso",required = false) String cdFonteRecurso, @RequestParam(name = "cdTipoSeguro",required = false) String cdTipoSeguro, @RequestParam(name = "cdModalidade",required = false) String cdModalidade, @RequestParam(name = "AnoEmissao",required = false) String AnoEmissao, @RequestParam(name = "MesEmissao",required = false) String MesEmissao, @RequestParam(name = "VlCusteio",required = false) BigDecimal VlCusteio, @RequestParam(name = "QtdCusteio",required = false) Integer QtdCusteio, @RequestParam(name = "Atividade",required = false) String Atividade){
+        return productService.selectProduct(nomeProduto, nomeRegiao, AnoEmissao, cdFonteRecurso, cdModalidade, MesEmissao, cdPrograma, cdSubPrograma, QtdCusteio, VlCusteio, Atividade, nomeUF, cdTipoSeguro);
+     }
 
 
 

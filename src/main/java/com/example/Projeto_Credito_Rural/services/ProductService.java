@@ -100,21 +100,8 @@ public class ProductService {
     }
 
 
-    public List<Product> selectProduct(
-            String nomeProduto,
-            String nomeRegiao,
-            String AnoEmissao,
-            String cdFonteRecurso,
-            String cdModalidade,
-            String MesEmissao,
-            String cdPrograma,
-            String cdSubPrograma,
-            Integer QtdCusteio,
-            BigDecimal VlCusteio,
-            String Atividade,
-            String nomeUF,
-            String cdTipoSeguro
-    ) {
+    //CONSULTA POR QUALQUER PARÂMETRO.
+    public List<Product> selectProduct(String nomeProduto, String nomeRegiao, String AnoEmissao, String cdFonteRecurso, String cdModalidade, String MesEmissao, String cdPrograma, String cdSubPrograma, Integer QtdCusteio, BigDecimal VlCusteio, String Atividade, String nomeUF, String cdTipoSeguro) {
         if (nomeProduto != null){
             return productCustomRepository.selectByNomeProduto(nomeProduto);
         }
