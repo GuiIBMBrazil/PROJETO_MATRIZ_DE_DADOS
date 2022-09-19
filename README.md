@@ -21,7 +21,7 @@ ENDPOINTS PRINCIPAIS
 
 <img width="343" alt="PAGINAÇÃO" src="https://user-images.githubusercontent.com/110836645/190985315-9d31c4d2-5374-48a5-a528-389dc5d77e54.png">
 
-A consulta pode ser realizada usando a documentação Swagger, ou como no exemplo acima uma ferramenta como o Insomnia ou Postman.<br>
+A consulta pode ser realizada usando a documentação Swagger, ou como no exemplo acima uma ferramenta como o Insomnia ou Postman.
 
 
 INSOMNIA
@@ -57,6 +57,26 @@ A API utiliza o Swagger UI para tornar a consulta mais fácil e dinâmica, assim
 Quando se clicar em "product-controller" se pode ter acesso a todos os endpoints da API, no caso do primeiro endpoint se deve ir endpoint que está anotado como "getProducts", confrome a imagem abaixo.
 
 <img width="932" alt="COMO ACESSAR O PRIMERO ENDPOINT COM O SWAGGER" src="https://user-images.githubusercontent.com/110836645/190992523-d7b4b053-e698-49ab-bf7f-3590cc6d61a9.png">
+
+Após selecionar a opção e clicar em "try it out", o Swagger irá fornecer a opção de escolher o número da página e o tamanho da página, após fornecer esses parâmetros basta clicar em "Execute", a imagem abaix mostra o funcionamento.
+
+<img width="918" alt="USO DO PRIMERO ENDPOINT NO SWAGGER" src="https://user-images.githubusercontent.com/110836645/190993659-d3d058e7-6cc2-4af5-92be-dab62636a540.png">
+
+E no "Response Body" se tem o exemplo abaixo, com a consulta realizada.
+
+<img width="894" alt="CONSULTA DO PRIMEIRO ENDPOINT NO SWAGGER" src="https://user-images.githubusercontent.com/110836645/190994120-2d398e00-717a-4991-9348-dd327e367d25.png">
+
+
+2° ENDPOINT: O segundo endpoint realiza a consulta de um elemento pelo seu ID no banco de dados, nesse tópico o passo a passo do uso do Insmonia, Postman e Swagger não será extremamente aprofundado visto que isso já foi realizado no tópico anterior, como o uso do Insomnia e do Postman é extremamente parecido, só será abordado a utilização do Insomnia e do Swagger daqui em diante.
+
+INSOMNIA
+
+Para realizar uma consulta por ID no Insomnia basta digitar a URL padrão "http://localhost:8080/product" seguido por "/(id desejado)", ainda utilizando o método GET.
+
+<img width="750" alt="CONSULTA DE UM PRODUTO PELO SEU ID NO INSOMNIA" src="https://user-images.githubusercontent.com/110836645/190995633-bd304408-5742-48a7-a444-dcd01fe2bfa2.png">
+
+
+
 
 
 
