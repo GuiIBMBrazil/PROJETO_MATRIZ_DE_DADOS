@@ -21,7 +21,7 @@ ENDPOINTS PRINCIPAIS
 
 <img width="343" alt="PAGINAÇÃO" src="https://user-images.githubusercontent.com/110836645/190985315-9d31c4d2-5374-48a5-a528-389dc5d77e54.png">
 
-A consulta pode ser realizada usando a documentação Swagger, ou como no exemplo acima uma ferramenta como o Insomnia ou Postman.
+A consulta pode ser realizada usando a documentação Swagger, ou como no exemplo acima uma ferramenta como o Insomnia ou Postman.<br>
 
 
 INSOMNIA
