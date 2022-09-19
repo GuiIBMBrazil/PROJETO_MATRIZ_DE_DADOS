@@ -19,6 +19,17 @@ ENDPOINTS PRINCIPAIS
 
 <img width="868" alt="CONSULTAS COM PAGINAÇÃO" src="https://user-images.githubusercontent.com/110836645/190983727-7ac9f3f2-130c-4615-856b-c6281215d1f3.png">
 
-<img width="343" alt="PAGINAÇÃO" src="https://user-images.githubusercontent.com/110836645/190985051-85933c95-15cd-47a9-8653-60e7ec8eb17c.png">
+<img width="343" alt="PAGINAÇÃO" src="https://user-images.githubusercontent.com/110836645/190985315-9d31c4d2-5374-48a5-a528-389dc5d77e54.png">
 
-A consulta pode ser realizada usando a documentação Swagger, ou como no exemplo acima uma ferramenta como o Insmonia ou Postman.
+A consulta pode ser realizada usando a documentação Swagger, ou como no exemplo acima uma ferramenta como o Insomnia ou Postman.
+
+
+INSOMNIA
+
+O uso do Insomnia e Postman é bem parecido, a requisição será feita através da URL na porta 8080 e no caso dessa API qualquer requisição começa com "/product" logo após "http://localhost:8080", no caso do primeiro endpoint, basta digitar na URL para ter acesso a primeira página da lista "http://localhost:8080/product", utilizando o tipo GET na requisição, como no exemplo abaixo.
+
+<img width="508" alt="COMO FAZER UMA REQUISIÇÃO NO PRIMEIRO ENDPOINT NO INSOMNIA" src="https://user-images.githubusercontent.com/110836645/190987097-63387fc5-2009-4138-af8c-798bdd937692.png">
+
+Como é uma consulta com paginação, existe um método para visualizar as outras páginas da consulta, para isso basta digitar a URL exatamente como em uma consulta normal porém logo depois você deve digitar "?page=(número da página desejada)" e assim você pode conseguir acesso as outras páginas da consulta, conforme o exemplo abaixo.
+
+
