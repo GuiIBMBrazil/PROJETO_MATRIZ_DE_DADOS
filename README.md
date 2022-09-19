@@ -126,9 +126,23 @@ No Swagger UI basta escolher a opção "getProductsSPag" e clicar em "Execute".
 <img width="848" alt="SPAG SWAGGER UI" src="https://user-images.githubusercontent.com/110836645/191002841-384641ca-2a0f-4e70-b5c1-09b6ba7d0ffc.png">
 
 
+<h3>CRUD</h3>
 
+Até o momento só foi mostrado a consulta do banco de dados, sem realizar nenhuma alteração no mesmo, partir de agora será mostrado como se realizar inserções, deleções e atualizações no banco de dados da aplicação.
 
+<h4>INSERÇÃO</h4>
 
+A inserção no banco de dados pode ser feita de maneira simples se seguido as regras do formato JSON para a entrada de dados.
+
+INSOMNIA
+
+Para realizar a inserção usando o Insomnia o usuário deverá mudar o método de requisição de GET para POST, selecionar o formato JSON como entrada do body digitar os atributos do novo produto, sem o ID pois o próprio banco de dados irá atribuir um ID para o objeto, note o exemplo abaixo.
+
+<img width="960" alt="COMO REALIZAR INSERÇÃO COM O INSOMNIA" src="https://user-images.githubusercontent.com/110836645/191017753-6b0d0e2c-26a0-4cbd-a300-ba748f8981d9.png">
+
+Se houver sucesso na inserção, a "Preview" deve mostrar a mensagem dizendo que o objeto foi inserido com sucesso e o ID do novo registro, se usar o GET e buscar esse registro pelo ID ele deve constar na base de dados, conforme o exemplo abaixo.
+
+<img width="762" alt="CONSULTANDO NOVO REGISTRO" src="https://user-images.githubusercontent.com/110836645/191018673-576d8a27-d886-4c2e-a443-db20d80029f5.png">
 
 
 
