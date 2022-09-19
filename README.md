@@ -18,3 +18,7 @@ ENDPOINTS PRINCIPAIS
 1° ENPOINT: O primero endpoint realiza a consulta de todos os produtos do banco de dados com paginação.
 
 <img width="868" alt="CONSULTAS COM PAGINAÇÃO" src="https://user-images.githubusercontent.com/110836645/190983727-7ac9f3f2-130c-4615-856b-c6281215d1f3.png">
+
+<img width="343" alt="PAGINAÇÃO" src="https://user-images.githubusercontent.com/110836645/190985051-85933c95-15cd-47a9-8653-60e7ec8eb17c.png">
+
+A consulta pode ser realizada usando a documentação Swagger, ou como no exemplo acima uma ferramenta como o Insmonia ou Postman.
